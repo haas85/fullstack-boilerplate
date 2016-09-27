@@ -2,7 +2,7 @@ client:
   build: .
   dockerfile: Dockerfile-client
   volumes:
-    - "./client:/src/app"
+    - "./client:/src"
     - "/src/app/node_modules"
   ports:
     - "8080:8080"
@@ -11,7 +11,7 @@ node:
   build: .
   dockerfile: Dockerfile-node
   volumes:
-    - "./server/node:/src/app"
-    - "/src/app/node_modules"
+    - "./server/node:/src"
+    - "/src/node_modules"
   ports:
-    - "3030:3000"
+    - "3000:3000"

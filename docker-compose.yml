@@ -7,11 +7,19 @@ client:
   ports:
     - "8080:8080"
 
-# node:
-#   build: .
-#   dockerfile: Dockerfile-node
-#   volumes:
-#     - "./server/node:/src"
-#     - "/src/node_modules"
-#   ports:
-#     - "3000:3000"
+node:
+  build: .
+  dockerfile: Dockerfile-node
+  volumes:
+    - "./server/node:/src"
+    - "/src/node_modules"
+  ports:
+    - "3000:3000"
+
+django:
+    build: .
+    dockerfile: Dockerfile-django
+    volumes:
+    - "./server/django:/src"
+    ports:
+      - "8000:8000"

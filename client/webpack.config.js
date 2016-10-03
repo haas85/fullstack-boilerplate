@@ -19,7 +19,13 @@ module.exports = {
       exclude: /node_modules/,
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
-    }]
+    }],
+    preLoaders: [
+      {
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        include: path.join(__dirname, 'src')
+      }]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

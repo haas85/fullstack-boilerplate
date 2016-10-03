@@ -7,7 +7,6 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import reducers from './reducers';
 import configureStore from './store/configureStore';
-import ActorHandler from './actors/index';
 import routes from './routes';
 import App from './components/app';
 
@@ -19,8 +18,6 @@ if(USE_REDUX_PROMISE) {
 } else {
   _store = configureStore();
 }
-
-ActorHandler(_store);
 
 export const store = _store;
 

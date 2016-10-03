@@ -34,8 +34,5 @@ RUN npm install webpack eslint -g
 
 WORKDIR /src
 ADD client/package.json /src/package.json
-RUN npm install
 
 EXPOSE 8080
-
-CMD npm run development
